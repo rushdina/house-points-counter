@@ -14,5 +14,5 @@ An interactive page to **track points for each Hogwarts house**: Gryffindor, Sly
 - Google Font: <a href="https://fonts.google.com/specimen/Cinzel">Cinzel</a>
 
 ## Credits
-Background image from <a href="https://unsplash.com/">Unsplash</a> 
+Background image from <a href="https://unsplash.com/">Unsplash</a> <br>
 Photo by <a href="https://unsplash.com/@cgcreates?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Cameron Gibson</a> on <a href="https://unsplash.com/photos/white-smoke-coming-from-brown-and-green-mountain-wtLn23YbuTE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
