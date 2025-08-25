@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hogwarts House Points</title>
+
+        <link rel="stylesheet" href="index.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+        <h1>Hogwarts House Points</h1>
+            <div class="grid-container">
+                <div class="house gryff-house">
+                    <h2>Gryffindor</h2>
+                    <h2 id="gryffindor-pt">0</h2>
+                    <button class="gryffindor-btn" onclick="increment('gryffindor')">+10 Points</button>
+                    <button class="gryffindor-btn"  onclick="decrement('gryffindor')">-10 Points</button>
+                    <button class="save-btn" onclick="save('gryffindor')">Save</button>
+                    <p id="save-gryff">Point history: </p>
+                    <p>Total: <span id="total-gryff"></span></p>
+                </div>
+                <div class="house raven-house">
+                    <h2>Ravenclaw</h2>
+                    <h2 id="ravenclaw-pt">0</h2>
+                    <button class="ravenclaw-btn" onclick="increment('ravenclaw')">+10 Points</button>
+                    <button class="ravenclaw-btn" onclick="decrement('ravenclaw')">-10 Points</button>
+                    <button class="save-btn" onclick="save('ravenclaw')">Save</button>
+                    <p id="save-raven">Point history: </p>
+                    <p>Total: <span id="total-raven"></span></p>
+                </div>
+                <div class="house huffle-house">
+                    <h2>Hufflepuff</h2>
+                    <h2 id="hufflepuff-pt">0</h2>
+                    <button class="hufflepuff-btn" onclick="increment('hufflepuff')">+10 Points</button>
+                    <button class="hufflepuff-btn" onclick="decrement('hufflepuff')">-10 Points</button>
+                    <button class="save-btn" onclick="save('hufflepuff')">Save</button>
+                    <p id="save-huffle">Point history: </p>
+                    <p>Total: <span id="total-huffle"></span></p>
+                </div>
+                <div class="house slyth-house"> 
+                    <h2>Slytherin</h2>
+                    <h2 id="slytherin-pt">0</h2>
+                    <button class="slytherin-btn" onclick="increment('slytherin')">+10 Points</button>
+                    <button class="slytherin-btn" onclick="decrement('slytherin')">-10 Points</button>
+                    <button class="save-btn" onclick="save('slytherin')">Save</button>
+                    <p id="save-slyth">Point history: </p>
+                    <p>Total: <span id="total-slyth"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
