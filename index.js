@@ -1,34 +1,47 @@
-// Store house data in an object
-let houses = {
-    gryffindor: { count: 0, total: 0, pt: "gryffindor-pt", save: "save-gryff", totalPt: "total-gryff"},
-    ravenclaw: { count: 0, total: 0, pt: "ravenclaw-pt", save: "save-raven", totalPt: "total-raven"},
-    hufflepuff: { count: 0, total: 0, pt: "hufflepuff-pt", save: "save-huffle", totalPt: "total-huffle" },
-    slytherin: { count: 0, total: 0, pt: "slytherin-pt", save: "save-slyth", totalPt: "total-slyth" },
+const houses = {
+  gryffindor: { point: 0, total: 0, step: 10, entries: [] },
+  ravenclaw: { point: 0, total: 0, step: 10, entries: [] },
+  hufflepuff: { point: 0, total: 0, step: 10, entries: [] },
+  slytherin: { point: 0, total: 0, step: 10, entries: [] },
+};
+
+Object.keys(houses).forEach((house) => {
+  const t = houses[house];
+
+  // Cache DOM elements dynamically using house
+  t.pointEl = document.getElementById(`${house}-point-el`);
+  t.entriesEl = document.getElementById(`${house}-entries-el`);
+  t.totalEl = document.getElementById(`${house}-total-el`);
+  t.incBtn = document.getElementById(`${house}-increment-btn`);
+  t.decBtn = document.getElementById(`${house}-decrement-btn`);
+  t.saveBtn = document.getElementById(`${house}-save-btn`);
+
+  // Attach event listeners
+  t.incBtn?.addEventListener("click", () => changePoint(house, t.step));
+  t.decBtn?.addEventListener("click", () => changePoint(house, -t.step));
+  t.saveBtn?.addEventListener("click", () => save(house));
+});
+
+// Update Functions
+function updateTeam(house) {
+  const t = houses[house];
+  if (t.pointEl) t.pointEl.textContent = t.point;
+  if (t.entriesEl) t.entriesEl.textContent = t.entries.join(" | ");
+  if (t.totalEl) t.totalEl.textContent = t.total;
 }
 
-// Increment house points
-function increment(houseName) {
-    let house = houses[houseName];
-    house.count += 10;
-    document.getElementById(house.pt).innerText = house.count;
+// Points Functions
+function changePoint(house, amount) {
+  const t = houses[house];
+  t.point += amount; // allow negative point
+  updateTeam(house);
 }
 
-// Decrement house points
-function decrement(houseName) {
-    let house = houses[houseName];
-    house.count -= 10;
-    document.getElementById(house.pt).innerText = house.count;
-}
-
-// Save house points
-function save(houseName) {
-    let house = houses[houseName];
-    let countStr = house.count + ", ";
-    document.getElementById(house.save).textContent += countStr;
-
-    house.total += house.count;
-    document.getElementById(house.totalPt).innerText = house.total;
-
-    house.count = 0;
-    document.getElementById(house.pt).innerText = 0;
+function save(house) {
+  const t = houses[house];
+  if (t.point === 0) return; // skip saving zero
+  t.entries.push(t.point);
+  t.total += t.point;
+  t.point = 0;
+  updateTeam(house);
 }

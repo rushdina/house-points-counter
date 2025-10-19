@@ -1,102 +1,114 @@
 body {
-    background-image: url("images/train.jpg");
-    background-size: cover;
-    font-family: "Cinzel", serif;
-    font-weight: bold;
-    text-align: center;
-    color: #fff;
-    margin: 0;
+  background: url("images/train.jpg") center/cover no-repeat;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin: 0;
 }
 
 #container {
-    max-width: 80%;
-    margin: 40px auto;
+  max-width: 80%;
+  margin: 40px auto;
 }
 
 h1 {
-    color: #fff;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  color: #fff;
+  margin: 10px 0 30px;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .house {
-    padding: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 4px solid;
+  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* House themes */
 .gryff-house {
-    background: linear-gradient(to bottom right, rgba(188, 39, 39, 0.8), rgba(86, 9, 9, 0.8));
-    border: 4px solid #450000;
-    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3),
-            inset -3px -3px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(188, 39, 39, 0.8),
+    rgba(86, 9, 9, 0.8)
+  );
+  border-color: #450000;
 }
 
 .raven-house {
-    background: linear-gradient(to bottom right, rgba(51, 51, 115, 0.8), rgba(3, 13, 67, 0.8));
-    border: 4px solid #060039;
-    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3),
-            inset -3px -3px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(51, 51, 115, 0.8),
+    rgba(3, 13, 67, 0.8)
+  );
+  border-color: #060039;
 }
 
 .huffle-house {
-    background: linear-gradient(to bottom right, rgba(209, 204, 65, 0.8), rgba(123, 114, 10, 0.8));
-    border: 4px solid #363600;
-    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3),
-            inset -3px -3px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(209, 204, 65, 0.8),
+    rgba(123, 114, 10, 0.8)
+  );
+  border-color: #363600;
 }
 
 .slyth-house {
-    background: linear-gradient(to bottom right, rgba(53, 138, 63, 0.8), rgba(1, 44, 9, 0.8));
-    border: 4px solid #042800;
-    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3),
-            inset -3px -3px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
-}
-
-.house p:last-of-type {
-    margin-bottom: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(53, 138, 63, 0.8),
+    rgba(1, 44, 9, 0.8)
+  );
+  border-color: #042800;
 }
 
 h2 {
-    font-size: 30px;
-    margin-top: 0;
-    margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin: 0 0 10px;
 }
 
+.house p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Shared score display */
+[id$="-point-el"] {
+  font-size: 3rem;
+  margin: 0 0 10px;
+}
+
+/* Buttons */
 button {
-    font-family: inherit;
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-    font-weight: bold;
-    width: 150px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+  font-family: inherit;
+  border: none;
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.gryffindor-btn, .ravenclaw-btn, .hufflepuff-btn, .slytherin-btn {
-    background: rgb(40, 39, 39);
-    border: 1px solid rgba(213, 213, 213, 0.534);
+.btn {
+  background: rgb(40, 39, 39);
+  border: 1px solid rgba(213, 213, 213, 0.534);
 }
 
 .save-btn {
-    background: rgb(238, 238, 238);
-    color: rgb(22, 22, 22);
+  background: rgb(238, 238, 238);
+  color: rgb(22, 22, 22);
 }
 
+/* Responsive layout */
 @media (max-width: 625px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 }
