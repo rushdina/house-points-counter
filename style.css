@@ -32,7 +32,7 @@ h1 {
 }
 
 /* House themes */
-.gryff-house {
+.gryffindor-house {
   background: linear-gradient(
     to bottom right,
     rgba(188, 39, 39, 0.8),
@@ -41,7 +41,7 @@ h1 {
   border-color: #450000;
 }
 
-.raven-house {
+.ravenclaw-house {
   background: linear-gradient(
     to bottom right,
     rgba(51, 51, 115, 0.8),
@@ -50,7 +50,7 @@ h1 {
   border-color: #060039;
 }
 
-.huffle-house {
+.hufflepuff-house {
   background: linear-gradient(
     to bottom right,
     rgba(209, 204, 65, 0.8),
@@ -59,7 +59,7 @@ h1 {
   border-color: #363600;
 }
 
-.slyth-house {
+.slytherin-house {
   background: linear-gradient(
     to bottom right,
     rgba(53, 138, 63, 0.8),
