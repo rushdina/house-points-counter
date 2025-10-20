@@ -32,7 +32,7 @@ This webpage is a **Hogwarts-themed house points tracker**, where users can add,
 - Add **animations** for point updates to make it more interactive.  
 
 ## 🖼️ Preview
-![House Points Counter Screenshot](images/screenshot-housePointsCounter.png)
+![House Points Counter Preview Screenshot](images/screenshot-housePointsCounter.png)
 
 ## 📚 Sources & References
 Background photo by [Cameron Gibson](https://unsplash.com/@cgcreates?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/white-smoke-coming-from-brown-and-green-mountain-wtLn23YbuTE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash")
