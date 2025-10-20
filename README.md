@@ -26,7 +26,9 @@ This webpage is a **Hogwarts-themed house points tracker**, where users can add,
 ## 💡 Future Improvements
 - Highlight the **leading house** dynamically.  
 - Include **countdown timer** for competitions or rounds 
-- Allow **custom point increments** rather than fixed +10/-10.  
+- Allow **custom point increments** rather than fixed +10/-10.
+- Save scores and history to local storage so progress isn’t lost on page refresh.
+- Add a “Clear Scores” button to reset all house points easily.
 - Add **animations** for point updates to make it more interactive.  
 
 ## 🖼️ Preview
